@@ -3,187 +3,209 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Meeting Assistants | Full Customer Signal Sample</title>
-  <meta name="description" content="A complete 30-expression, source-linked Customer Signal Pack sample for the AI meeting assistant market.">
+  <title>Employee Benefits Pricing Intelligence Sample | Pino</title>
+  <meta name="description" content="A public-source sample of B2B employee-benefits pricing found in executed contracts, procurement records and municipal buyer comparisons.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Cpath d='M17 14h25l8 8v28H17z' fill='%23f8fafc'/%3E%3Cpath d='M42 14v10h8M23 31h20M23 39h15' fill='none' stroke='%230ea5e9' stroke-width='4'/%3E%3C/svg%3E">
   <style>
-    :root { --ink:#11110f; --paper:#f4f0e7; --card:#fffdf8; --acid:#e8ff63; --rust:#c85832; --muted:#68675f; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:linear-gradient(180deg,#faf7ef,var(--paper)); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
-    a { color:inherit; text-underline-offset:3px; }
-    .wrap { width:min(1080px,calc(100% - 32px)); margin:0 auto; }
-    nav { display:flex; justify-content:space-between; padding:24px 0; font-size:14px; }
-    nav a { text-decoration:none; font-weight:800; }
-    header { padding:68px 0 58px; max-width:900px; }
-    .tag { display:inline-block; padding:6px 10px; border:1px solid var(--ink); border-radius:999px; background:var(--acid); font-size:11px; font-weight:850; letter-spacing:.1em; }
-    h1,h2 { font-family:Georgia,"Times New Roman",serif; letter-spacing:-.04em; }
-    h1 { font-size:clamp(48px,8vw,84px); line-height:.95; margin:20px 0; }
-    h2 { font-size:clamp(32px,5vw,44px); margin:0 0 18px; }
-    h3 { margin:0 0 10px; font-size:21px; }
-    p,li { line-height:1.62; }
-    .lead { font-size:20px; line-height:1.55; color:#3e3d38; max-width:800px; }
-    .meta { font-size:13px; color:var(--muted); margin-top:20px; }
-    .audit { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:28px; }
-    .audit div { border:1px solid var(--ink); background:var(--card); padding:18px; }
-    .audit strong { display:block; font:700 30px/1 Georgia,serif; color:var(--rust); margin-bottom:7px; }
-    section { border-top:1px solid rgba(17,17,15,.25); padding:52px 0; }
-    .table-wrap { overflow-x:auto; border:1px solid var(--ink); background:var(--card); box-shadow:7px 7px 0 rgba(200,88,50,.75); }
-    table { border-collapse:collapse; width:100%; min-width:900px; font-size:14px; }
-    th,td { text-align:left; vertical-align:top; border-bottom:1px solid rgba(17,17,15,.18); padding:13px 12px; line-height:1.45; }
-    th { position:sticky; top:0; background:var(--ink); color:#fff; font-size:12px; letter-spacing:.04em; }
+    :root { --ink:#0b1220; --navy:#111c31; --paper:#f8fafc; --white:#fff; --sky:#0ea5e9; --gold:#f6c453; --muted:#526177; --line:#ccd5e1; --ok:#0f766e; --warn:#9a5a00; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font: 17px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color:#0369a1; }
+    .wrap { width:min(1080px, calc(100% - 40px)); margin:0 auto; }
+    header { background:linear-gradient(125deg, #0b1220, #172642); color:#f8fafc; padding:28px 0 72px; }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:20px; padding-bottom:54px; }
+    nav a { color:#d8e2ee; text-decoration:none; font-size:.9rem; }
+    .brand { color:#fff; font-size:.82rem; font-weight:850; letter-spacing:.06em; }
+    .kicker { color:#7dd3fc; font-size:.8rem; font-weight:850; letter-spacing:.1em; text-transform:uppercase; }
+    h1 { max-width:900px; margin:16px 0 22px; font:600 clamp(3rem, 6vw, 5.8rem)/.98 Georgia, serif; letter-spacing:-.055em; text-wrap:balance; }
+    .lead { max-width:820px; color:#cbd5e1; font-size:1.14rem; }
+    .meta { display:flex; gap:24px; flex-wrap:wrap; margin-top:30px; color:#aebdd0; font-size:.82rem; }
+    main { padding:0 0 80px; }
+    .summary { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); background:#fff; margin-top:-32px; position:relative; }
+    .summary div { padding:22px; border-right:1px solid var(--line); }
+    .summary div:last-child { border-right:0; }
+    .summary strong { display:block; font:600 1.75rem/1.1 Georgia, serif; }
+    .summary span { color:var(--muted); font-size:.78rem; }
+    section { padding:72px 0 0; }
+    h2 { margin:0 0 16px; font:600 clamp(2rem, 4vw, 3.5rem)/1.05 Georgia, serif; letter-spacing:-.04em; }
+    .section-lead { max-width:820px; margin:0 0 30px; color:var(--muted); }
+    .finding { margin-bottom:26px; background:#fff; border:1px solid var(--line); }
+    .finding-head { display:grid; grid-template-columns:1fr auto; gap:18px; align-items:start; padding:24px 26px; background:#eef4f8; border-bottom:1px solid var(--line); }
+    .finding h3 { margin:0 0 4px; font-size:1.18rem; }
+    .buyer { color:var(--muted); font-size:.88rem; }
+    .status { padding:4px 8px; border-radius:999px; background:#dff6f2; color:var(--ok); font-size:.72rem; font-weight:850; text-transform:uppercase; letter-spacing:.04em; }
+    .status.partial { background:#fff1d3; color:var(--warn); }
+    .finding-body { display:grid; grid-template-columns:.72fr 1.28fr; gap:0; }
+    .price-panel { padding:26px; border-right:1px solid var(--line); }
+    .price { margin:5px 0 12px; font:600 clamp(1.8rem, 3vw, 2.65rem)/1.05 Georgia, serif; color:#075985; }
+    .scope { color:var(--muted); font-size:.86rem; }
+    .details { padding:26px; }
+    dl { display:grid; grid-template-columns:150px 1fr; gap:12px 18px; margin:0; }
+    dt { font-weight:800; color:#2f435f; }
+    dd { margin:0; color:var(--muted); }
+    .calculation { margin-top:18px; padding:14px 16px; border-left:4px solid var(--gold); background:#fff8e5; color:#5d440f; }
+    .source-link { display:inline-block; margin-top:18px; font-weight:750; }
+    .matrix { overflow-x:auto; border:1px solid var(--line); background:#fff; }
+    table { width:100%; min-width:840px; border-collapse:collapse; }
+    th, td { padding:15px 16px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:.88rem; }
+    th { background:var(--navy); color:#fff; font-size:.75rem; letter-spacing:.05em; text-transform:uppercase; }
     tr:last-child td { border-bottom:0; }
-    td:first-child { font-weight:850; color:var(--rust); }
-    .label { display:inline-block; padding:3px 7px; border:1px solid rgba(17,17,15,.35); border-radius:999px; font-size:11px; white-space:nowrap; }
-    .label.context { background:#eee9dc; }
-    .signal { background:var(--card); border:1px solid var(--ink); padding:24px; box-shadow:5px 5px 0 rgba(200,88,50,.72); }
-    .signal p:last-child { margin-bottom:0; }
-    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .grid.three { grid-template-columns:repeat(3,1fr); }
-    .card { border:1px solid rgba(17,17,15,.45); padding:20px; background:rgba(255,253,248,.72); }
-    .card p:last-child { margin-bottom:0; }
-    .objections { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; counter-reset:item; }
-    .objections div { counter-increment:item; background:var(--card); border:1px solid rgba(17,17,15,.35); padding:16px 16px 16px 48px; position:relative; line-height:1.5; }
-    .objections div::before { content:counter(item,decimal-leading-zero); position:absolute; left:14px; color:var(--rust); font-weight:850; }
-    .recommend { border:2px solid var(--ink); background:var(--acid); padding:30px; box-shadow:9px 9px 0 var(--rust); }
-    .recommend .message { font:700 clamp(25px,4vw,38px)/1.17 Georgia,serif; max-width:850px; }
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:25px; }
-    .hooks { counter-reset:item; list-style:none; padding:0; }
-    .hooks li { counter-increment:item; padding:13px 0 13px 48px; border-top:1px solid rgba(17,17,15,.25); position:relative; }
-    .hooks li::before { content:counter(item,decimal-leading-zero); position:absolute; left:0; color:var(--rust); font-weight:850; }
-    .cta { background:var(--ink); color:#f8f4e9; padding:34px; margin:58px 0 80px; }
-    .button { display:inline-flex; margin-top:12px; padding:14px 20px; background:var(--acid); color:var(--ink); text-decoration:none; font-weight:850; border-radius:5px; }
-    @media(max-width:760px){ .audit,.grid,.grid.three,.objections,.split{grid-template-columns:1fr;} header{padding-top:42px;} }
+    .note { padding:20px 22px; background:#eaf7ff; border-left:5px solid var(--sky); color:#1f4e69; }
+    .method { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .method article { padding:24px; background:#fff; border:1px solid var(--line); }
+    .method h3 { margin:0 0 8px; font-size:1rem; }
+    .method p { margin:0; color:var(--muted); font-size:.9rem; }
+    footer { margin-top:80px; padding:34px 0 50px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+    @media (max-width:760px) {
+      .summary { grid-template-columns:1fr 1fr; }
+      .summary div:nth-child(2) { border-right:0; }
+      .summary div:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+      .finding-body, .method { grid-template-columns:1fr; }
+      .price-panel { border-right:0; border-bottom:1px solid var(--line); }
+      dl { grid-template-columns:1fr; gap:4px; }
+      dd { margin-bottom:10px; }
+    }
+    @media (max-width:500px) {
+      .wrap { width:min(100% - 24px, 1080px); }
+      h1 { font-size:3rem; }
+      .summary { grid-template-columns:1fr; }
+      .summary div { border-right:0; border-bottom:1px solid var(--line); }
+      .summary div:last-child { border-bottom:0; }
+      .finding-head { grid-template-columns:1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav><a href="index.html">PINO SIGNAL RESEARCH</a><a href="index.html#pricing">Get a pack</a></nav>
-    <header>
-      <span class="tag">FULL CUSTOMER SIGNAL SAMPLE</span>
-      <h1>AI meeting assistants</h1>
-      <p class="lead">Thirty public expressions, five repeated problems, ten objections and one positioning direction to test next. Every expression links to the original page.</p>
-      <p class="meta">Collected September 20, 2026 · Category sample · Public evidence is directional and does not replace customer interviews.</p>
-      <div class="audit">
-        <div><strong>30</strong>source-linked expressions</div>
-        <div><strong>29</strong>direct user signals</div>
-        <div><strong>9</strong>original pages</div>
-        <div><strong>4</strong>evidence types</div>
-      </div>
-    </header>
+  <header>
+    <div class="wrap">
+      <nav><div class="brand">PINO PRICING INTELLIGENCE</div><a href="index.html">← Product overview</a></nav>
+      <div class="kicker">Public sample · employee benefits platforms</div>
+      <h1>Source-backed B2B pricing intelligence.</h1>
+      <p class="lead">This sample shows how negotiated enterprise prices can be reconstructed without pretending every public number is comparable. Vendor quotes, derived values, authorization ceilings and missing evidence are labeled separately.</p>
+      <div class="meta"><span>Checked: September 20, 2026</span><span>5 findings</span><span>4 vendors</span><span>Public documents only</span></div>
+    </div>
+  </header>
 
-    <section id="evidence">
-      <h2>The evidence table</h2>
-      <p>Rows are paraphrased to keep the signal concise. “Direct user” means a person describing their own use, evaluation, objection or workflow. Founder context is shown separately and does not count toward the buyer-evidence floor.</p>
-      <div class="table-wrap">
+  <main class="wrap">
+    <div class="summary">
+      <div><strong>2</strong><span>findings with directly usable pricing</span></div>
+      <div><strong>3</strong><span>partial findings with explicit caveats</span></div>
+      <div><strong>1</strong><span>derived PEPM calculation</span></div>
+      <div><strong>0</strong><span>unsupported pricing estimates</span></div>
+    </div>
+
+    <section>
+      <h2>Findings</h2>
+      <p class="section-lead">Each card states exactly what the public source can support. The same vendor may appear more than once when separate records reveal different periods or commercial terms.</p>
+
+      <article class="finding">
+        <div class="finding-head"><div><h3>BambooHR</h3><div class="buyer">Town of Amherst, New Hampshire · customer proposal in public board packet</div></div><span class="status">Found</span></div>
+        <div class="finding-body">
+          <div class="price-panel"><div class="price">$10.52 / $3.99 PEPM</div><div class="scope">Effective rates for HR Pro and Benefits Administration, quoted for different employee quantities.</div></div>
+          <div class="details">
+            <dl>
+              <dt>List prices</dt><dd>HR Pro $17.00 PEPM; Benefits Administration $5.50 PEPM.</dd>
+              <dt>Quoted total</dt><dd>$2,217.01 monthly; $5,800 one-time HR implementation; $8,017.01 due at activation.</dd>
+              <dt>Discount</dt><dd>37% total effective discount, or $1,301.99 monthly.</dd>
+              <dt>Confidence</dt><dd>High.</dd>
+              <dt>Caveat</dt><dd>The quote expired August 30, 2024. Rounded PEPM figures reproduce $2,217.52, $0.51 above the quoted total, so the vendor line totals are preserved.</dd>
+            </dl>
+            <a class="source-link" href="https://www.amherstnh.gov/sites/g/files/vyhlif4116/f/agendas/2024.07.22_bos_meeting_agenda_and_packet_3.pdf">Open the board packet, proposal p. 106 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="finding-head"><div><h3>Benefitfocus · 2018 award</h3><div class="buyer">Metropolitan Water Reclamation District of Greater Chicago</div></div><span class="status">Found</span></div>
+        <div class="finding-body">
+          <div class="price-panel"><div class="price">$490K / 5 years</div><div class="scope">Comprehensive benefits platform for approximately 1,900 employees.</div></div>
+          <div class="details">
+            <dl>
+              <dt>Derived value</dt><dd>Approximately $4.30 PEPM.</dd>
+              <dt>Confidence</dt><dd>High for the award ceiling; medium for the derived PEPM.</dd>
+              <dt>Caveat</dt><dd>The effective value may include implementation or other non-recurring items. It is not a vendor-quoted unit rate.</dd>
+            </dl>
+            <div class="calculation"><strong>Calculation:</strong> $490,000 ÷ 60 months ÷ 1,900 employees = $4.30 PEPM.</div>
+            <a class="source-link" href="https://mwrd.legistar.com/LegislationDetail.aspx?GUID=8E375BCF-56BC-4844-B955-16F8E66389B4&amp;ID=3548872&amp;Options=&amp;Search=">Open the award record →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="finding-head"><div><h3>Benefitfocus · 2026 renewal</h3><div class="buyer">Metropolitan Water Reclamation District of Greater Chicago</div></div><span class="status partial">Partial</span></div>
+        <div class="finding-body">
+          <div class="price-panel"><div class="price">Up to $780K / 5 years</div><div class="scope">Active employee and retiree benefits administration. Population not disclosed.</div></div>
+          <div class="details">
+            <dl>
+              <dt>Commercial term</dt><dd>4% year-one rate increase followed by a rate lock.</dd>
+              <dt>Confidence</dt><dd>High for the public authorization.</dd>
+              <dt>Caveat</dt><dd>The later record has expanded scope, so it is not a like-for-like price increase from the 2018 award. No unit rate is disclosed.</dd>
+            </dl>
+            <a class="source-link" href="https://mwrd.legistar.com/LegislationDetail.aspx?GUID=4D39625F-A084-481D-90E3-2F43CD539DEF&amp;ID=8167248&amp;Options=&amp;Search=">Open the renewal record →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="finding-head"><div><h3>Businessolver</h3><div class="buyer">City of Visalia · municipal vendor comparison</div></div><span class="status partial">Partial</span></div>
+        <div class="finding-body">
+          <div class="price-panel"><div class="price">$7.05 PEPM</div><div class="scope">Benefits administration platform. Covered population not disclosed.</div></div>
+          <div class="details">
+            <dl>
+              <dt>Additional fees</dt><dd>Health-plan selection tools and enhanced reporting cost extra; amounts were not disclosed.</dd>
+              <dt>Confidence</dt><dd>Medium-high.</dd>
+              <dt>Caveat</dt><dd>Businessolver was compared but not selected. This is buyer comparison evidence, not an executed Businessolver contract.</dd>
+            </dl>
+            <a class="source-link" href="https://visalia.legistar.com/LegislationDetail.aspx?FullText=1&amp;GUID=64B5D02C-3D8F-4878-8F88-4688BB206A6F&amp;ID=7024760&amp;Options=&amp;Search=">Open the buyer comparison →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="finding">
+        <div class="finding-head"><div><h3>Selerix</h3><div class="buyer">City of Austin · public authorization</div></div><span class="status partial">Partial</span></div>
+        <div class="finding-body">
+          <div class="price-panel"><div class="price">Up to $1.2M / 2 years</div><div class="scope">Benefits platform for employees, retirees and dependents. Population not disclosed.</div></div>
+          <div class="details">
+            <dl>
+              <dt>Term</dt><dd>One initial year plus two six-month extensions.</dd>
+              <dt>Confidence</dt><dd>Medium.</dd>
+              <dt>Caveat</dt><dd>The public page does not disclose a unit price or covered population and did not show completed award history. No PEPM is calculated.</dd>
+            </dl>
+            <a class="source-link" href="https://austintexas.legistar.com/LegislationDetail.aspx?GUID=C3EE2F74-4A78-4603-BE8E-B2A6A51216CA&amp;ID=7829492&amp;Options=&amp;Search=">Open the authorization record →</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Comparison limits</h2>
+      <p class="section-lead">The values above describe different scopes, populations, periods and record types. They can reveal pricing structure and order of magnitude. They cannot be treated as a clean vendor ranking.</p>
+      <div class="matrix">
         <table>
-          <thead><tr><th>ID</th><th>Public expression</th><th>Context</th><th>Theme</th><th>Evidence</th><th>Source</th></tr></thead>
+          <thead><tr><th>Finding</th><th>Unit rate?</th><th>Population?</th><th>Executed award?</th><th>Safe use</th></tr></thead>
           <tbody>
-            <tr><td>01</td><td>A six-person product team left Fireflies for Otter because real-time collaboration mattered.</td><td>Team evaluating tools</td><td>Collaboration</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>02</td><td>Otter’s team-invite emails reached clients and became a reason to switch.</td><td>Existing customer</td><td>Trust</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>03</td><td>A team with more than 25,000 recorded minutes could barely search its transcripts.</td><td>Heavy-use team</td><td>Search</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>04</td><td>Search across months, pause/resume recording and an in-person app were reasons one company preferred Rumi.</td><td>Team that switched</td><td>Capture</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>05</td><td>One company banned Otter because account invitations looked like official company messages.</td><td>Workplace user</td><td>Trust</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>06</td><td>After testing at least ten tools, one evaluator singled out botless video recording.</td><td>Category evaluator</td><td>Botless capture</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1l6vocz/otterai_alternative_with_less_spam_and_better/">Reddit</a></td></tr>
-            <tr><td>07</td><td>Granola felt useful because it cleans rough notes without replacing the user’s own thinking.</td><td>Multi-product evaluator</td><td>Personal workflow</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>08</td><td>Fathom stood out for team follow-ups, action items and keeping decisions visible.</td><td>Multi-product evaluator</td><td>Execution</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>09</td><td>Otter was most compelling when the transcript itself was the product: interviews, lectures and institutional memory.</td><td>Multi-product evaluator</td><td>Archive</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>10</td><td>Fireflies covered a broad enterprise workflow, but felt like a large system rather than a light note tool.</td><td>Multi-product evaluator</td><td>Complexity</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>11</td><td>Speaker attribution was the biggest quality difference; many products assigned speech to the wrong person.</td><td>Meeting-data evaluator</td><td>Accuracy</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>12</td><td>A team chose MeetGeek for integrations, shared search and a bot-free desktop option.</td><td>Current team user</td><td>Workflow fit</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/ProductivityApps/comments/1t60dw3/i_tried_5_ai_meeting_tools_heres_where_each_one/">Reddit</a></td></tr>
-            <tr><td>13</td><td>After using six products, one buyer concluded that core features had converged.</td><td>Heavy category user</td><td>Feature parity</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>14</td><td>A visible recording bot made meetings feel surveilled.</td><td>Heavy category user</td><td>Trust</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>15</td><td>Fathom’s highlights were useful when the user accepted a bot in the call.</td><td>Heavy category user</td><td>Trade-off</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>16</td><td>tl;dv’s clip sharing helped teammates consume a meeting moment without attending the call.</td><td>Heavy category user</td><td>Async sharing</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>17</td><td>Read.ai’s engagement analytics felt like manager surveillance and people stopped using it.</td><td>Heavy category user</td><td>Employee trust</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>18</td><td>Built-in summaries from Zoom, Meet and Teams weakened the reason to buy a standalone transcript tool.</td><td>Heavy category user</td><td>Substitution</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Reddit</a></td></tr>
-            <tr><td>19</td><td>Moving action items into ClickUp took one SaaS operator 15–20 minutes after every meeting.</td><td>SaaS operator</td><td>Manual handoff</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1q9lt94/how_do_you_handle_postmeeting_task_creation/">Reddit</a></td></tr>
-            <tr><td>20</td><td>A Fireflies user still rewrote the summary, emailed actions and wanted easier Asana updates.</td><td>SaaS operator</td><td>Manual handoff</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1q9lt94/how_do_you_handle_postmeeting_task_creation/">Reddit</a></td></tr>
-            <tr><td>21</td><td>A Google Meet user spent five minutes cleaning notes and assigning tasks to owners.</td><td>Frequent-meeting team</td><td>Manual review</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1q9lt94/how_do_you_handle_postmeeting_task_creation/">Reddit</a></td></tr>
-            <tr><td>22</td><td>A buyer who tried Otter and Fireflies found their follow-up support weak.</td><td>Active buyer</td><td>Follow-up</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1kvwrj2/ai_meeting_assistant_recommendation/">Reddit</a></td></tr>
-            <tr><td>23</td><td>The buyer wanted meeting-related email threads handled inside Microsoft Teams.</td><td>Active buyer</td><td>Integration</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1kvwrj2/ai_meeting_assistant_recommendation/">Reddit</a></td></tr>
-            <tr><td>24</td><td>A Teams app was mandatory because the buyer expected low adoption outside the existing workspace.</td><td>Active buyer</td><td>Adoption</td><td><span class="label">Direct user</span></td><td><a href="https://www.reddit.com/r/SaaS/comments/1kvwrj2/ai_meeting_assistant_recommendation/">Reddit</a></td></tr>
-            <tr><td>25</td><td>Searchable transcripts, action tracking and integrations improved follow-up and accountability.</td><td>Verified reviewer</td><td>Execution</td><td><span class="label">Direct user</span></td><td><a href="https://www.capterra.com/p/197037/Fireflies/reviews/">Capterra</a></td></tr>
-            <tr><td>26</td><td>Multi-speaker calls, accents and technical terms still needed correction before client-facing use.</td><td>Verified reviewer</td><td>Accuracy</td><td><span class="label">Direct user</span></td><td><a href="https://www.capterra.com/p/197037/Fireflies/reviews/">Capterra</a></td></tr>
-            <tr><td>27</td><td>Higher-tier limits, restricted customisation and syncing delays weakened real-time follow-up.</td><td>Verified reviewer</td><td>Pricing</td><td><span class="label">Direct user</span></td><td><a href="https://www.capterra.com/p/197037/Fireflies/reviews/">Capterra</a></td></tr>
-            <tr><td>28</td><td>Varying accents still required a human check even when transcripts were usually accurate.</td><td>Current user</td><td>Accuracy</td><td><span class="label">Direct user</span></td><td><a href="https://www.trustpilot.com/review/fireflies.ai">Trustpilot</a></td></tr>
-            <tr><td>29</td><td>A regular Teams user wanted a way to stop note-taking bots without consent and said exposure may only become visible after joining.</td><td>Teams participant</td><td>Consent and opt-out</td><td><span class="label">Direct user</span></td><td><a href="https://learn.microsoft.com/en-us/answers/questions/4425337/prevent-any-bot-to-take-notes-of-my-participation">Microsoft Q&amp;A</a></td></tr>
-            <tr><td>30</td><td>QuietHint’s maker rejected two defaults: a bot in the call and recordings stored elsewhere.</td><td>Product maker</td><td>Privacy context</td><td><span class="label context">Founder context</span></td><td><a href="https://www.producthunt.com/products/quiethint">Product Hunt</a></td></tr>
+            <tr><td>BambooHR</td><td>Yes</td><td>185 / 68 by product</td><td>Customer proposal</td><td>List-to-effective discount, implementation and activation total</td></tr>
+            <tr><td>Benefitfocus 2018</td><td>Derived</td><td>Approx. 1,900</td><td>Yes</td><td>Effective contract value with calculation caveat</td></tr>
+            <tr><td>Benefitfocus 2026</td><td>No</td><td>No</td><td>Renewal authorization</td><td>Ceiling, escalation term and scope evolution</td></tr>
+            <tr><td>Businessolver</td><td>Yes</td><td>No</td><td>No</td><td>Buyer comparison and extra-feature flags</td></tr>
+            <tr><td>Selerix</td><td>No</td><td>No</td><td>Authorization only</td><td>Contract ceiling and term</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="meta">Audit: 29 direct-user signals and one founder-context signal. Nine original pages across community discussions, software reviews, a support forum and product-launch comments. One page contributes at most six rows, exactly 20% of the sample.</p>
     </section>
 
     <section>
-      <h2>Five repeated problems</h2>
-      <div class="grid">
-        <article class="signal"><h3>1. Basic notes reached parity</h3><p>Transcription, summaries and action items are expected. Buyers need one job the built-in summary cannot finish.</p></article>
-        <article class="signal"><h3>2. Work breaks after the summary</h3><p>People still rewrite, assign and move work into ClickUp, Asana, Teams or CRM systems.</p></article>
-        <article class="signal"><h3>3. Recording behaviour costs trust</h3><p>Visible bots, surprise auto-joining and invitation emails can make clients and employees feel watched or misled.</p></article>
-        <article class="signal"><h3>4. Accuracy needs a correction path</h3><p>Names, owners and deadlines need a fast human review when accents, cross-talk or attribution fail.</p></article>
-        <article class="signal"><h3>5. Workflow fit decides adoption</h3><p>Teams want the result inside the tools they already use, not another destination to remember.</p></article>
+      <h2>Research standard</h2>
+      <div class="method">
+        <article><h3>Original records first</h3><p>Contracts, amendments, awards, board packets, RFP responses, public proposals, customer agreements and archives take priority over secondary summaries.</p></article>
+        <article><h3>Evidence types stay separate</h3><p>Quoted prices, calculated values and authorization ceilings are labeled so a decision-maker can see what the source actually proves.</p></article>
+        <article><h3>Every calculation is reproducible</h3><p>Derived values retain the original inputs and formula. Hidden assumptions are not converted into false precision.</p></article>
+        <article><h3>Missing data remains missing</h3><p>An unavailable population or unit price is reported as an evidence gap. It is not filled with an AI estimate.</p></article>
       </div>
+      <div class="note" style="margin-top:22px"><strong>Public sample only.</strong> This page demonstrates the output standard. It does not claim that these records represent current list prices or directly comparable product packages.</div>
     </section>
+  </main>
 
-    <section>
-      <h2>Ten purchase objections</h2>
-      <div class="objections">
-        <div>Zoom, Meet or Teams already gives me a summary.</div>
-        <div>I do not want a visible bot in client calls.</div>
-        <div>I cannot put confidential audio on another company’s server.</div>
-        <div>It will mishear accents, names or technical terms.</div>
-        <div>It will assign the action to the wrong speaker.</div>
-        <div>I still have to rewrite the summary and move every task.</div>
-        <div>My team will ignore another standalone app.</div>
-        <div>The useful integrations sit behind a higher paid tier.</div>
-        <div>Auto-join or invitation behaviour could embarrass us with clients.</div>
-        <div>All of these products promise the same thing.</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Three positioning directions</h2>
-      <div class="grid three">
-        <article class="card"><h3>A. Reviewed execution</h3><p>Turn the meeting into assigned work, then show the human exactly what needs confirmation.</p></article>
-        <article class="card"><h3>B. Private capture</h3><p>No bot joins. No recording leaves the device.</p></article>
-        <article class="card"><h3>C. Searchable memory</h3><p>Find the decision from six months ago without replaying the call.</p></article>
-      </div>
-    </section>
-
-    <section>
-      <div class="recommend">
-        <span class="tag">RECOMMENDED TEST</span>
-        <h2>Lead with reviewed execution</h2>
-        <p class="message">“Your meeting becomes assigned work. You approve the uncertain parts before anything is sent.”</p>
-        <div class="split">
-          <div><h3>Why it leads</h3><ul><li>Built-in summaries weakened basic transcription as a paid reason to switch.</li><li>Multiple discussions show people still copy, rewrite and assign work by hand.</li><li>Buyers ask for Teams, Asana, ClickUp, CRM and email follow-up.</li><li>A review step answers accuracy concerns without promising perfection.</li></ul></div>
-          <div><h3>What could disprove it</h3><ul><li>Privacy may outrank automation in sensitive calls.</li><li>A product without deep integrations cannot deliver this promise.</li><li>Automatic task creation can damage trust when owners or deadlines are wrong.</li></ul></div>
-        </div>
-        <p><strong>Next test:</strong> compare this message with a privacy-first version on the homepage and with five current category users.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Ten evidence-based content angles</h2>
-      <ol class="hooks">
-        <li>The transcript has become a commodity. The reviewable handoff is still unsolved.</li>
-        <li>Why action items still spend 15 minutes travelling from a meeting into ClickUp.</li>
-        <li>A recording bot can lose client trust before it captures one word.</li>
-        <li>Fully automatic is risky when the tool guesses the wrong owner or deadline.</li>
-        <li>The best meeting assistant may be the one your team never has to open.</li>
-        <li>A searchable archive is valuable only when 25,000 minutes remain searchable.</li>
-        <li>Built-in summaries changed the buying question for every standalone meeting tool.</li>
-        <li>Botless capture solves consent friction; it still needs to produce useful work.</li>
-        <li>Speaker attribution matters more than a polished paragraph when tasks are assigned.</li>
-        <li>The strongest workflow is capture, flag uncertainty, review, then sync.</li>
-      </ol>
-    </section>
-
-    <div class="cta">
-      <h2>Want this for your product?</h2>
-      <p>A paid pack narrows the research to your product, target buyer and three competitors. You receive 30 source-linked expressions, five patterns, ten objections, three positioning directions, one recommendation and ten content angles within 48 hours.</p>
-      <a class="button" href="index.html#pricing">Get a founding pack for $199</a>
-    </div>
-  </div>
+  <footer><div class="wrap">Pino Pricing Intelligence · Public-source evidence for negotiated B2B markets</div></footer>
 </body>
 </html>
