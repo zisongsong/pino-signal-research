@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Meeting Assistants | Customer Signal Sample</title>
+  <meta name="description" content="A public, source-linked Customer Signal Pack sample for the AI meeting assistant market.">
+  <style>
+    :root { --ink:#11110f; --paper:#f4f0e7; --card:#fffdf8; --acid:#e8ff63; --rust:#c85832; --muted:#68675f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg,#faf7ef,var(--paper)); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; text-underline-offset:3px; }
+    .wrap { width:min(880px,calc(100% - 32px)); margin:0 auto; }
+    nav { display:flex; justify-content:space-between; padding:24px 0; font-size:14px; }
+    nav a { text-decoration:none; font-weight:800; }
+    header { padding:75px 0 65px; }
+    .tag { display:inline-block; padding:6px 10px; border:1px solid var(--ink); border-radius:999px; background:var(--acid); font-size:11px; font-weight:850; letter-spacing:.1em; }
+    h1,h2 { font-family:Georgia,"Times New Roman",serif; letter-spacing:-.04em; }
+    h1 { font-size:clamp(50px,9vw,86px); line-height:.95; margin:20px 0; }
+    h2 { font-size:36px; margin:0 0 18px; }
+    .lead { font-size:20px; line-height:1.55; color:#3e3d38; max-width:750px; }
+    .meta { font-size:13px; color:var(--muted); margin-top:22px; }
+    section { border-top:1px solid rgba(17,17,15,.25); padding:55px 0; }
+    .signal { background:var(--card); border:1px solid var(--ink); padding:27px; margin:18px 0; box-shadow:6px 6px 0 rgba(200,88,50,.78); }
+    .signal h3 { margin:0 0 10px; font-size:22px; }
+    .signal p, section>p, li { line-height:1.62; }
+    .evidence { border-left:4px solid var(--acid); padding:1px 0 1px 18px; margin:18px 0 0; color:var(--muted); }
+    .evidence li { margin:8px 0; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .card { border:1px solid rgba(17,17,15,.4); padding:20px; background:rgba(255,253,248,.65); }
+    .card h3 { margin-top:0; }
+    .hooks { counter-reset:item; list-style:none; padding:0; }
+    .hooks li { counter-increment:item; padding:13px 0 13px 48px; border-top:1px solid rgba(17,17,15,.25); position:relative; }
+    .hooks li::before { content:counter(item,decimal-leading-zero); position:absolute; left:0; color:var(--rust); font-weight:850; }
+    .post { background:var(--ink); color:#f8f4e9; padding:28px; margin:14px 0; line-height:1.7; }
+    .post p { margin:0 0 14px; }
+    .cta { background:var(--acid); border:1.5px solid var(--ink); padding:28px; margin:55px 0 80px; box-shadow:8px 8px 0 var(--rust); }
+    .button { display:inline-flex; margin-top:12px; padding:14px 20px; background:var(--ink); color:#fff; text-decoration:none; font-weight:800; border-radius:5px; }
+    @media(max-width:650px){ .grid{grid-template-columns:1fr;} header{padding-top:45px;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a href="index.html">PINO SIGNAL RESEARCH</a><a href="index.html#pricing">Get a pack</a></nav>
+    <header>
+      <span class="tag">PUBLIC CUSTOMER SIGNAL SAMPLE</span>
+      <h1>AI meeting assistants</h1>
+      <p class="lead">A compact example of how scattered public conversations become usable positioning and content. Every finding below links back to public evidence.</p>
+      <p class="meta">Collected September 20, 2026 · Sources include Reddit, G2 and Product Hunt</p>
+    </header>
+
+    <section>
+      <h2>What customers keep saying</h2>
+
+      <article class="signal">
+        <h3>1. The visible meeting bot creates a trust problem</h3>
+        <p>Users describe recording bots as intrusive, disruptive or surveillance-like. Botless and local recording are becoming buying criteria.</p>
+        <ul class="evidence">
+          <li>A SaaS user said people were tired of an Otter bot entering calls and making meetings feel surveilled. <a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Source</a></li>
+          <li>A Product Hunt founder framed the category problem as tools demanding a bot in every call and recordings on external servers. <a href="https://www.producthunt.com/products/quiethint">Source</a></li>
+          <li>Product Hunt reviews of Fireflies include spammy bot behavior among recurring complaints. <a href="https://www.producthunt.com/products/fireflies-ai">Source</a></li>
+        </ul>
+      </article>
+
+      <article class="signal">
+        <h3>2. The category has reached feature parity</h3>
+        <p>Transcription, summaries, action items, calendar connections and searchable notes are now expected. Customers struggle to tell products apart.</p>
+        <ul class="evidence">
+          <li>One user who had tried six leading tools said they had converged around the same feature set. <a href="https://www.reddit.com/r/SaaS/comments/1ruem4m/the_meeting_tool_you_use_probably_does_not_matter/">Source</a></li>
+          <li>A recent comparison advised buyers to choose the capture workflow before comparing feature lists. <a href="https://www.reddit.com/r/AiNoteTaker/comments/1vhi002/otter_vs_fireflies_vs_fathom_vs_granola_vs_notes/">Source</a></li>
+        </ul>
+      </article>
+
+      <article class="signal">
+        <h3>3. Customers want action after the meeting</h3>
+        <p>The transcript is no longer the final job. Users want notes turned into decisions, tickets, follow-ups and documents.</p>
+        <ul class="evidence">
+          <li>A user said the larger problem begins after the meeting, when notes still need to become documents, decks and action items. <a href="https://www.reddit.com/r/ArtificialNtelligence/comments/1tavccz/removed/">Source</a></li>
+          <li>A founder described transcripts as inadequate when the meeting lacked context from documents, tools and earlier discussions. <a href="https://www.reddit.com/r/SaasDevelopers/comments/1s0yce3/anyone_else_tired_of_unproductive_meetings_and/">Source</a></li>
+        </ul>
+      </article>
+
+      <article class="signal">
+        <h3>4. Accuracy still breaks trust</h3>
+        <p>Accent handling, speaker identification and incorrect words remain visible sources of frustration. One wrong term can change an assignment.</p>
+        <ul class="evidence">
+          <li>G2 groups accuracy issues and AI inaccuracy among recurring Otter complaints. A reviewer specifically mentioned accents and speaking speed. <a href="https://www.g2.com/products/otter-ai/reviews?page=14&amp;source=search">Source</a></li>
+          <li>A Notta and Otter comparison also surfaces transcript accuracy as a repeated theme. <a href="https://www.g2.com/compare/notta-vs-otter-ai">Source</a></li>
+        </ul>
+      </article>
+
+      <article class="signal">
+        <h3>5. Privacy can become the main message</h3>
+        <p>Local processing, botless capture and clear consent give buyers a concrete reason to switch.</p>
+        <ul class="evidence">
+          <li>QuietHint leads with local transcription, no meeting bot and audio that stays on the Mac. <a href="https://www.producthunt.com/products/quiethint">Source</a></li>
+          <li>Anarlog and talat both use privacy and local processing as central positioning. <a href="https://www.producthunt.com/products/hyprnote">Anarlog</a> · <a href="https://www.producthunt.com/products/talat">talat</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Purchase objections</h2>
+      <div class="grid">
+        <div class="card">My meeting platform already summarizes calls.</div>
+        <div class="card">I do not want another bot joining client meetings.</div>
+        <div class="card">I cannot send confidential recordings to another server.</div>
+        <div class="card">The transcript will miss accents or multiple speakers.</div>
+        <div class="card">I still have to move action items into another tool.</div>
+        <div class="card">All of these products look the same.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stronger positioning directions</h2>
+      <div class="grid">
+        <article class="card"><h3>Action</h3><p>Your meeting notes become assigned work before the call ends.</p></article>
+        <article class="card"><h3>Privacy</h3><p>No bot joins. No recording leaves your computer.</p></article>
+        <article class="card"><h3>Accuracy</h3><p>Know when the transcript is uncertain before it creates the wrong follow-up.</p></article>
+        <article class="card"><h3>Workflow</h3><p>Choose the next system your meeting should update automatically.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>12 evidence-based hooks</h2>
+      <ol class="hooks">
+        <li>AI meeting tools have a feature-parity problem.</li>
+        <li>Your transcript is no longer the product. The handoff to action is.</li>
+        <li>A meeting bot can lose trust before it records a single word.</li>
+        <li>The fastest-growing advantage in meeting AI may be local processing.</li>
+        <li>Every meeting assistant promises action items. Users still copy them by hand.</li>
+        <li>Accuracy is not a percentage when one wrong name changes the assignment.</li>
+        <li>Buyers are comparing capture workflows before AI models.</li>
+        <li>Botless is becoming a positioning category of its own.</li>
+        <li>If Zoom already summarizes calls, why should a buyer add your product?</li>
+        <li>The useful meeting begins before the transcript and continues after the summary.</li>
+        <li>Users do not want more meeting data. They want fewer loose ends.</li>
+        <li>Privacy copy works when it describes where the audio goes.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Two publish-ready posts</h2>
+      <article class="post"><p>AI meeting tools are reaching feature parity.</p><p>Transcription, summaries, action items and calendar connections now appear everywhere. Buyers are shifting to three questions: Does a bot join the call? Where does the audio go? What happens to the action items afterwards?</p><p>The next positioning advantage will come from workflow and trust, not another “AI-powered summary” claim.</p></article>
+      <article class="post"><p>The transcript is no longer the final product.</p><p>Users already expect a meeting tool to record, summarize and find action items. Their frustration begins when those action items remain trapped in a summary.</p><p>The stronger promise is concrete: decisions enter the right document, tasks reach the right owner, and uncertainty is flagged before the follow-up is sent.</p></article>
+    </section>
+
+    <div class="cta">
+      <h2>Want this for your market?</h2>
+      <p>The paid pack adds 50 source-linked customer expressions, a competitor promise comparison, thirty hooks, eight social posts, four short-video scripts and a focused messaging recommendation.</p>
+      <a class="button" href="index.html#pricing">Get a founding pack for $199</a>
+    </div>
+  </div>
+</body>
+</html>

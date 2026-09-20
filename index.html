@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Signal Pack | Pino Signal Research</title>
+  <meta name="description" content="Public customer language turned into source-linked positioning and publish-ready content in 48 hours.">
+  <style>
+    :root {
+      --ink: #11110f;
+      --paper: #f4f0e7;
+      --card: #fffdf8;
+      --acid: #e8ff63;
+      --rust: #c85832;
+      --line: #24241f;
+      --muted: #68675f;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 90% 8%, rgba(232,255,99,.68), transparent 20rem),
+        linear-gradient(180deg, #faf7ef 0%, var(--paper) 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      font-size: 14px;
+    }
+    .brand { font-weight: 800; letter-spacing: -.02em; }
+    .nav-links { display: flex; gap: 22px; color: var(--muted); }
+    .nav-links a { text-decoration: none; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 56px;
+      align-items: center;
+      padding: 76px 0 90px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: var(--acid);
+    }
+    h1 {
+      margin: 22px 0 22px;
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(54px, 7vw, 90px);
+      line-height: .94;
+      letter-spacing: -.055em;
+      font-weight: 600;
+    }
+    .lead {
+      max-width: 650px;
+      font-size: 21px;
+      line-height: 1.5;
+      color: #34342f;
+    }
+    .actions { display: flex; gap: 14px; align-items: center; margin-top: 34px; flex-wrap: wrap; }
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border: 1.5px solid var(--line);
+      border-radius: 6px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 750;
+      text-decoration: none;
+      box-shadow: 5px 5px 0 var(--acid);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .button:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--acid); }
+    .button.secondary { background: transparent; color: var(--ink); box-shadow: none; }
+    .small { color: var(--muted); font-size: 13px; }
+    .signal-card {
+      position: relative;
+      background: var(--card);
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 13px 13px 0 var(--rust);
+      transform: rotate(1.5deg);
+    }
+    .signal-card::before {
+      content: "PUBLIC SIGNAL";
+      position: absolute;
+      right: 18px;
+      top: -12px;
+      background: var(--acid);
+      border: 1px solid var(--line);
+      padding: 5px 9px;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .12em;
+    }
+    .quote { font-family: Georgia, serif; font-size: 27px; line-height: 1.25; margin: 8px 0 20px; }
+    .source { color: var(--muted); font-size: 12px; }
+    .arrow { margin: 25px 0 15px; font-size: 28px; }
+    .insight { padding: 16px; background: #f0eddc; border-left: 5px solid var(--rust); line-height: 1.45; }
+    section { padding: 86px 0; border-top: 1px solid rgba(36,36,31,.24); }
+    h2 { font-family: Georgia, serif; font-size: clamp(38px, 5vw, 62px); line-height: 1; letter-spacing: -.04em; margin: 0 0 24px; }
+    .section-lead { max-width: 720px; font-size: 19px; line-height: 1.55; color: var(--muted); margin-bottom: 38px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .deliverable {
+      background: rgba(255,253,248,.75);
+      border: 1px solid rgba(36,36,31,.45);
+      padding: 24px;
+      min-height: 190px;
+    }
+    .number { font-family: Georgia, serif; color: var(--rust); font-size: 34px; }
+    .deliverable h3 { margin: 30px 0 8px; font-size: 18px; }
+    .deliverable p { color: var(--muted); line-height: 1.5; margin: 0; }
+    .sample {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 36px;
+      background: var(--ink);
+      color: #f7f3e8;
+      padding: 45px;
+      border-radius: 10px;
+    }
+    .sample h2 { color: var(--acid); }
+    .sample-list { display: grid; gap: 12px; }
+    .sample-row { border-top: 1px solid rgba(255,255,255,.26); padding: 16px 0 6px; }
+    .sample-row b { display: block; margin-bottom: 6px; }
+    .sample-row span { color: #b9b7ae; line-height: 1.45; }
+    .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); }
+    .step { padding: 25px; border-right: 1px solid var(--line); background: rgba(255,253,248,.62); }
+    .step:last-child { border-right: 0; }
+    .step b { display: block; margin-bottom: 18px; color: var(--rust); }
+    .step p { margin: 0; line-height: 1.5; color: var(--muted); }
+    .price-panel {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      align-items: center;
+      gap: 40px;
+      border: 1.5px solid var(--line);
+      padding: 42px;
+      background: var(--card);
+      box-shadow: 9px 9px 0 var(--acid);
+    }
+    .price { font-family: Georgia, serif; font-size: 78px; line-height: 1; }
+    .price small { font-family: Inter, sans-serif; font-size: 14px; color: var(--muted); }
+    .checklist { list-style: none; padding: 0; margin: 20px 0 0; }
+    .checklist li { padding: 7px 0; }
+    .checklist li::before { content: "✓"; color: var(--rust); font-weight: 900; margin-right: 10px; }
+    details { border-top: 1px solid rgba(36,36,31,.35); padding: 20px 0; }
+    summary { cursor: pointer; font-weight: 750; }
+    details p { color: var(--muted); line-height: 1.55; max-width: 780px; }
+    footer { padding: 40px 0 60px; display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
+    @media (max-width: 820px) {
+      .hero, .sample, .price-panel { grid-template-columns: 1fr; }
+      .hero { padding-top: 45px; }
+      .signal-card { margin: 15px 8px 0 0; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .process { grid-template-columns: 1fr 1fr; }
+      .step:nth-child(2) { border-right: 0; }
+      .step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      h1 { font-size: 50px; }
+      .lead { font-size: 18px; }
+      .process { grid-template-columns: 1fr; }
+      .step { border-right: 0; border-bottom: 1px solid var(--line); }
+      .step:last-child { border-bottom: 0; }
+      .price-panel, .sample { padding: 27px; }
+      footer { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand">PINO SIGNAL RESEARCH</div>
+      <div class="nav-links">
+        <a href="#deliverables">Deliverables</a>
+        <a href="#sample">Sample</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero">
+        <div>
+          <span class="eyebrow">48-hour research product</span>
+          <h1>Write with your buyer’s words.</h1>
+          <p class="lead">We find the public conversations your market is already having, trace every claim to a source, and turn the findings into positioning and content you can publish.</p>
+          <div class="actions">
+            <a class="button" href="#pricing">Get the founding pack</a>
+            <a class="button secondary" href="sample.html">See the full sample</a>
+          </div>
+          <p class="small">No kickoff call. One intake form. Delivered within 48 hours after a complete brief.</p>
+        </div>
+
+        <aside class="signal-card" aria-label="Example customer signal">
+          <p class="quote">“The bigger problem wasn’t note-taking. It was what happens after the meeting.”</p>
+          <p class="source">Public SaaS discussion · source-linked in the report</p>
+          <div class="arrow">↓</div>
+          <div class="insight"><strong>Content angle</strong><br>The transcript is no longer the product. The handoff to action is.</div>
+        </aside>
+      </div>
+
+      <section id="deliverables">
+        <h2>Evidence first. Content second.</h2>
+        <p class="section-lead">The pack gives you the language, the patterns behind it, and finished material. You can inspect the sources before using any claim.</p>
+        <div class="grid-3">
+          <article class="deliverable"><span class="number">50</span><h3>Source-linked customer expressions</h3><p>Collected from public discussions, reviews, videos and product communities.</p></article>
+          <article class="deliverable"><span class="number">5+10</span><h3>Pain clusters and objections</h3><p>The problems buyers repeat, the outcomes they want and the reasons they hesitate.</p></article>
+          <article class="deliverable"><span class="number">30</span><h3>Hooks from real market language</h3><p>Each hook connects to a documented customer pattern rather than a generic prompt.</p></article>
+          <article class="deliverable"><span class="number">8</span><h3>X or LinkedIn posts</h3><p>Publish-ready posts written for one primary channel and your stated buyer.</p></article>
+          <article class="deliverable"><span class="number">4</span><h3>Short-video scripts</h3><p>Compact scripts built around the strongest pains, objections and purchase triggers.</p></article>
+          <article class="deliverable"><span class="number">1</span><h3>Messaging recommendation</h3><p>A concise position, proof direction and the claims your product should stop leading with.</p></article>
+        </div>
+      </section>
+
+      <section id="sample">
+        <div class="sample">
+          <div>
+            <span class="eyebrow">Public sample</span>
+            <h2>AI meeting assistants</h2>
+            <p>We reviewed public customer discussions and product reviews across Reddit, G2 and Product Hunt.</p>
+          </div>
+          <div class="sample-list">
+            <div class="sample-row"><b>Signal 01</b><span>Visible meeting bots create discomfort before the product has demonstrated value.</span></div>
+            <div class="sample-row"><b>Signal 02</b><span>Transcription and summaries have reached feature parity. Workflow fit is becoming the differentiator.</span></div>
+            <div class="sample-row"><b>Signal 03</b><span>Users want decisions, tasks and follow-ups moved into the next system automatically.</span></div>
+            <div class="sample-row"><b>Signal 04</b><span>Accent, speaker and wording errors can make an otherwise polished summary unsafe to trust.</span></div>
+            <div class="sample-row"><b>Strongest content angle</b><span>Your transcript is no longer the product. The handoff to action is.</span></div>
+            <div class="actions"><a class="button" href="sample.html">Read the source-linked sample</a></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <h2>One form in. One usable pack out.</h2>
+        <p class="section-lead">The scope is fixed so the research can begin without a sales call or a week of onboarding.</p>
+        <div class="process">
+          <div class="step"><b>01 · Brief</b><p>Send your URL, target buyer, three competitors and primary channel.</p></div>
+          <div class="step"><b>02 · Research</b><p>We collect public customer language, source every finding and separate evidence from inference.</p></div>
+          <div class="step"><b>03 · Build</b><p>Signals become objections, positioning directions, hooks, posts and short scripts.</p></div>
+          <div class="step"><b>04 · Deliver</b><p>You receive the source database and finished content within 48 hours.</p></div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="price-panel">
+          <div>
+            <span class="eyebrow">First five packs</span>
+            <h2>Founding price</h2>
+            <ul class="checklist">
+              <li>Complete Customer Signal Pack</li>
+              <li>48-hour delivery after complete intake</li>
+              <li>One factual correction round</li>
+              <li>One in-scope content revision</li>
+            </ul>
+          </div>
+          <div>
+            <div class="price">$199 <small>one time</small></div>
+            <div class="actions"><a class="button" id="checkout" href="#activation">Reserve a founding pack</a></div>
+            <p class="small" id="activation">Checkout will open after payout verification. No payment is collected on this preview page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Questions</h2>
+        <details><summary>Do you use private customer data?</summary><p>No. The standard pack uses public pages and public conversations. Private support tickets, call transcripts or customer interviews are used only when you supply them with permission.</p></details>
+        <details><summary>Is the research AI-assisted?</summary><p>Yes. AI speeds up collection, clustering and drafting. Every delivered claim is checked against its linked source, and generic unmodified output is not included.</p></details>
+        <details><summary>Which products are a good fit?</summary><p>B2B SaaS, AI tools and digital products with an identifiable buyer and enough public discussion to study. Products with no users, no category conversations and no clear buyer may not have enough evidence for a useful pack.</p></details>
+        <details><summary>What happens if public evidence is too thin?</summary><p>We tell you before production begins. You can choose a refund or a smaller competitor-language pack using the evidence that exists.</p></details>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Pino Signal Research</span>
+      <span>Public evidence · Source-linked findings · AI-assisted delivery</span>
+    </footer>
+  </div>
+</body>
+</html>
